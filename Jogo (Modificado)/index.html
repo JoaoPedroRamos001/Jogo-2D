@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo 2D Canvas/Javascript</title>
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <style>
+        canvas {
+            border: 2px solid #333;
+            background-image: url('assets/terra.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 600px;
+            height: 600px;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <ul>
+        <li id="hp">HP: 0%</li>
+        <li id="points">Pontos: 0</li>
+        <li id="monsters">Monstros Abatidos: 0</li>
+    </ul>
+    <canvas id="game" width="500px" height="500px"></canvas>
+    <div id="start-message">
+        Digite seu nome:
+        <input type="text" id="player-name" placeholder="Nome do jogador">
+        <button id="start-button">Iniciar</button>
+    </div>
+
+    <div id="game-over" style="display: none;">
+        <h1>Game Over</h1>
+        <p>Seu Pontos: <span id="final-points">0</span></p>
+        <p>Monstros Abatidos: <span id="monsters-killed">0</span></p>
+        <p id="story"></p> 
+        <button id="restart-button">Reiniciar Jogo</button>
+    </div>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/sprite.js"></script>
+    <script src="js/entity.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/npc.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/tree.js"></script>
+    <script src="js/heart.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script> 
+    
+</body>
+</html>
